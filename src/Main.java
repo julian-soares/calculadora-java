@@ -5,13 +5,18 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean continuarOperacao = true;
         while (continuarOperacao) {
-            System.out.printf("Calculadora...%nSelecione uma operação:%n[1] Adição%n[2] Subtração%n[3] Divisão%n[4] Multiplicação%n");
+            System.out.printf("Calculadora..." +
+                    "%nSelecione uma operação:%n" +
+                    "[1] Adição%n" +
+                    "[2] Subtração%n" +
+                    "[3] Divisão%n" +
+                    "[4] Multiplicação%n");
 
             System.out.print("Escolha: ");
             byte escolhaOperacao = scanner.nextByte();
 
             if (escolhaOperacao < 1 || escolhaOperacao > 4) {
-                System.out.println("Escolha Inválida");
+                System.out.println("Operação Inválida! Tente novamente...");
                 continue;
             }
 
@@ -52,7 +57,11 @@ public class Main {
                     return;
             }
             System.out.println("Resultado: " + resultado);
-            System.out.printf("Desejar fazer outra operação?%n1 - [SIM]%n2 - [NÃO]%nOpcão: ");
+            System.out.printf("Desejar realizar outra operação?%n" +
+                    "1 - [SIM]%n" +
+                    "2 - [NÃO]%n" +
+                    "Opcão: ");
+
             byte opcaoContinuar = scanner.nextByte();
 
             if (opcaoContinuar == 1) {
