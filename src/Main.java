@@ -3,12 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean continuar = true;
-        while (continuar) {
+        boolean continuarOperacao = true;
+        while (continuarOperacao) {
             System.out.printf("Calculadora...%nSelecione uma operação:%n[1] Adição%n[2] Subtração%n[3] Divisão%n[4] Multiplicação%n");
 
             System.out.print("Escolha: ");
             byte escolhaOperacao = scanner.nextByte();
+
+            if (escolhaOperacao < 1 || escolhaOperacao > 4) {
+                System.out.println("Escolha Inválida");
+                continue;
+            }
 
             System.out.print("Escolha o 1° número: ");
             double num01 = scanner.nextDouble();
@@ -51,9 +56,9 @@ public class Main {
             byte opcaoContinuar = scanner.nextByte();
 
             if (opcaoContinuar == 1) {
-                continuar = true;
+                continuarOperacao = true;
             } else if (opcaoContinuar == 2) {
-                continuar = false;
+                continuarOperacao = false;
             } else {
                 System.out.println("Operação Inválida!");
             }
