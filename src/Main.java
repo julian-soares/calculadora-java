@@ -42,8 +42,7 @@ public class Main {
                         resultado = num01 / num02;
                     } else {
                         System.out.println("ERRO!: DIVISÃO POR 0");
-                        scanner.close();
-                        return;
+                        continue;
                     }
                     break;
 
